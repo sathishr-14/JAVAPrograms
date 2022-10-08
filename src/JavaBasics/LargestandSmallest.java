@@ -17,6 +17,29 @@ public class LargestandSmallest {
 		}
 		System.out.println("Largest number is : " + largest);
 		System.out.println("Smallest number is : " + smallest);
+		
+		int a[] = {10,20,30,9,8,1000};
+		int firstlargest = a[0];
+		int secondlargest = a[1];
+//		if(a[0] > a[1]) {
+//			firstlargest = a[0];
+//			secondlargest = a[1];
+//		}
+//		else {
+//			firstlargest = a[1];
+//			secondlargest = a[0];
+//		}
+		for(int i=1; i<a.length;i++) {
+			if(a[i] > firstlargest) {
+				secondlargest = firstlargest;
+				firstlargest = a[i];
+			}
+			else if(a[i]< firstlargest && a[i] > secondlargest) {
+				secondlargest = a[i];
+			}
+		}
+		System.out.println("First largest is : "+firstlargest);
+		System.out.println("Second largest is : "+secondlargest);
 	}
 
 }

@@ -14,6 +14,9 @@ public class StringReverse {
 		}
 
 		System.out.println(rev);
+		
+		StringBuilder sb = new StringBuilder("Sathish");
+		System.out.println(sb.reverse());
 	}
 
 }
